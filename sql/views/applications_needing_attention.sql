@@ -24,6 +24,7 @@ WHERE
               'INTERVIEW_SCHEDULED',
               'INTERVIEW_COMPLETED',
               'OFFER_RECEIVED',
-              'REJECTED'
+              'REJECTED',
+              'WITHDRAWN'
           )
     );

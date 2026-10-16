@@ -113,7 +113,7 @@ CREATE VIEW public.applications_needing_attention AS
      JOIN public.jobs j ON ((j.job_id = a.job_id)))
   WHERE (((CURRENT_DATE - (a.applied_at)::date) >= 3) AND (NOT (EXISTS ( SELECT 1
            FROM public.application_events e
-          WHERE ((e.application_id = a.application_id) AND (e.event_type = ANY (ARRAY['RECRUITER_CONTACTED'::text, 'ASSESSMENT_RECEIVED'::text, 'ASSESSMENT_COMPLETED'::text, 'INTERVIEW_SCHEDULED'::text, 'INTERVIEW_COMPLETED'::text, 'OFFER_RECEIVED'::text, 'REJECTED'::text])))))));
+          WHERE ((e.application_id = a.application_id) AND (e.event_type = ANY (ARRAY['RECRUITER_CONTACTED'::text, 'ASSESSMENT_RECEIVED'::text, 'ASSESSMENT_COMPLETED'::text, 'INTERVIEW_SCHEDULED'::text, 'INTERVIEW_COMPLETED'::text, 'OFFER_RECEIVED'::text, 'REJECTED'::text, 'WITHDRAWN'::text])))))));
 
 
 --
